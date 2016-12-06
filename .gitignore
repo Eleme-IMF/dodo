@@ -1,3 +1,4 @@
 xcuserdata
 *.xcworkspacedata
 .idea
+npm-debug.log.*
