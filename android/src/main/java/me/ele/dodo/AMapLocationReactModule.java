@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 
 public class AMapLocationReactModule extends ReactContextBaseJavaModule implements AMapLocationListener, LifecycleEventListener {
     private static final String MODULE_NAME = "EleRNLocation";
-    private final AMapLocationClient mLocationClient;
+    private AMapLocationClient mLocationClient;
     private AMapLocationListener mLocationListener = this;
     private final ReactApplicationContext mReactContext;
     // 是否显示详细信息
@@ -40,9 +40,6 @@ public class AMapLocationReactModule extends ReactContextBaseJavaModule implemen
     public AMapLocationReactModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.mReactContext = reactContext;
-        this.mLocationClient = new AMapLocationClient(reactContext);
-        this.mLocationClient.setLocationListener(mLocationListener);
-        this.mReactContext.addLifecycleEventListener(this);
     }
 
     @Override
@@ -58,6 +55,9 @@ public class AMapLocationReactModule extends ReactContextBaseJavaModule implemen
 
     @ReactMethod
     public void startLocation(@Nullable ReadableMap options) {
+        mLocationClient = new AMapLocationClient(mReactContext);
+        mLocationClient.setLocationListener(mLocationListener);
+        mReactContext.addLifecycleEventListener(this);
         AMapLocationClientOption mLocationOption = new AMapLocationClientOption();
         needDetail = true;
         if (options != null) {
