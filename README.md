@@ -292,6 +292,15 @@ const styles = StyleSheet.create({
 AppRegistry.registerComponent('LocationExample', () => LocationExample);
 ```
 
+## 5. Release Note
+
+- [*] 0.2.1
+  - 升级高德SDK jar包到 V3.3 
+  - Fix [bug](https://github.com/Eleme-IMF/dodo/issues/9)
+- [*] 0.2.0
+  - 兼容 RN 0.40 
+
+
 ## 5. Any Help
 
 Issues and PR are welcomed!
