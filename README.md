@@ -293,7 +293,10 @@ AppRegistry.registerComponent('LocationExample', () => LocationExample);
 ```
 
 ## 5. Release Note
-
+- [*] 0.2.2
+  - 升级高德SDK iOS 基础framework 到 V1.3.4
+  - 升级高德SDK iOS 定位framework 到 V2.3.0
+  - Fix [bug](https://github.com/Eleme-IMF/dodo/issues/11)
 - [*] 0.2.1
   - 升级高德SDK jar包到 V3.3 
   - Fix [bug](https://github.com/Eleme-IMF/dodo/issues/9)

@@ -1,6 +1,6 @@
 {
   "name": "ele-react-native-location",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Android & iOS location sdk for react native",
   "main": "index.js",
   "private": false,
